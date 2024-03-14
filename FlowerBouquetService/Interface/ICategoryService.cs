@@ -1,0 +1,22 @@
+﻿using FlowerBouquetBussinessOject.Models;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace FlowerBouquetService.Interface
+{
+	public interface ICategoryService
+	{
+		Task<IEnumerable<Category>> GetAllCategorysAsync();
+
+		Task<Category?> GetCategoryByIdAsync(int categoryId);
+
+		Task<bool> CreateCategoryAsync(Category category);
+
+		Task<bool> UpdateCategoryAsync(Category category);
+
+		Task<bool> DeleteCategoryAsync(int categoryId);
+	}
+}
